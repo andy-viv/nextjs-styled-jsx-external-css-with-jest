@@ -1,7 +1,16 @@
-# nextjs-styled-jsx-external-css-with-jest
+# nextjs-styled-jsx-external-css-with-jest example repo
 
-Example repo of Next.js, styled-jsx with external css and Jest with snapshot
-testing for global jsx bug report.
+Example repo for
+[styled-jsx bug report](https://github.com/zeit/styled-jsx/issues/354).
+
+## Summary
+
+I'm using Next.js, styled-jsx with external css compiled through postcss and
+Jest with snapshot testing. Scoped styles works as expected, global styles
+through styled-jsx do not. As far as Jest is concerned these should result in
+the same output, no?
+
+## Explanation
 
 Snapshot testing works as expected with the use of
 [`indentity-obj-proxy`](https://github.com/keyanzhang/identity-obj-proxy) and
@@ -12,6 +21,8 @@ when using scoped `styled-jsx` Eg:
 // components/Footer.js
 <style jsx>{footerStyles}</style>;
 ```
+
+creates a correct snapshot.
 
 However when adding `global` to the style element
 
@@ -31,7 +42,7 @@ However when adding `global` to the style element
           in div (at index.js:11)
           in Unknown (at index.test.js:6)
 
-      Consider adding an error boundary to your tree to customize error handling behavior.
+      Consider adding an error boundary to your tree to customize error handling behaviour.
       Visit https://fb.me/react-error-boundaries to learn more about error boundaries.
 
   ● renders correctly › encountered a declaration exception
@@ -52,17 +63,26 @@ Removing the `global` from the style tag
 <style jsx>{stylesheet}</style>;
 ```
 
-results in correctly running tests, but the styles are thus scoped.
+results with correctly running tests and snapshots, but the styles are thus
+scoped.
 
-Is this a bug? I can try and use global styles through the `<link>` in the head with Next.js `import Head from "next/head";` and scoped with styled-jsx, but it would be good to use a single method in the JSX to include styles.
+I can try and use global styles through the `<link>` in the head with Next.js
+`import Head from "next/head";` and scoped with `styled-jsx`, but it would be
+good to use a single method to include styles with JSX throughout my app,
+ideally just `<style jsx>` to include styles (and not mixing `<link>`s
+everywhere).
 
-This seems related too, but not the same as this issue:
+## Example Repo
+
+https://github.com/jthegedus/nextjs-styled-jsx-external-css-with-jest
+
+## Related
+
 https://github.com/zeit/styled-jsx/issues/298
 
-## Install
+## Versions:
 
-`yarn`
-
-## Test
-
-`yarn test`
+```json
+"next": "^4.1.4",
+"styled-jsx": "^2.2.0"
+```
