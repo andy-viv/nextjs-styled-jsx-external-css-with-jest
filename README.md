@@ -54,6 +54,8 @@ Removing the `global` from the style tag
 
 results in correctly running tests, but the styles are thus scoped.
 
+Is this a bug? I can try and use global styles through the `<link>` in the head with Next.js `import Head from "next/head";` and scoped with styled-jsx, but it would be good to use a single method in the JSX to include styles.
+
 This seems related too, but not the same as this issue:
 https://github.com/zeit/styled-jsx/issues/298
 
