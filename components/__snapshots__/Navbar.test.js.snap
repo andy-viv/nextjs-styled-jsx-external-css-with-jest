@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="jsx-__scopedHash"
+>
+  <h1
+    className="jsx-__scopedHash"
+  >
+    navbar: using it's parent's style
+  </h1>
+  <p
+    className="jsx-__scopedHash"
+  >
+    navbar: with a paragraph using the local style
+  </p>
+  <p
+    className="jsx-__scopedHash apples"
+  >
+    navbar: another with a specific className style
+  </p>
+</div>
+`;

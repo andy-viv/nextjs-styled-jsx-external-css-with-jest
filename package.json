@@ -1,0 +1,36 @@
+{
+  "name": "styled-jsx-external-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "NODE_ENV=test jest"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.2.1",
+    "next": "^4.1.4",
+    "normalize.css": "^7.0.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-load-plugins": "^2.3.0",
+    "postcss-scss": "^1.0.2",
+    "precss": "^2.0.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-test-renderer": "^16.1.1",
+    "styled-jsx": "^2.2.0",
+    "styled-jsx-css-loader": "^0.3.0",
+    "styled-jsx-plugin-postcss": "^0.1.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|sass|scss)$": "identity-obj-proxy"
+    }
+  }
+}

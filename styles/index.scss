@@ -1,0 +1,22 @@
+@import 'normalize.css';
+
+$para-color: green;
+
+p {
+  color: $para-color;
+}
+/*p {
+  color: green;
+}*/
+h1 {
+  font-size: 30px;
+  color: blue;
+}
+
+.bananas {
+  color: orange;
+}
+
+:fullscreen a {
+  display: flex;
+}

@@ -1,0 +1,36 @@
+{
+  "env": {
+    "test": {
+      "plugins": [],
+      "presets": [
+        ["env", { "modules": "commonjs" }],
+        [
+          "next/babel",
+          {
+            "styled-jsx": {
+              "plugins": [["styled-jsx-plugin-postcss"]]
+            }
+          }
+        ]
+      ]
+    },
+    "development": {
+      "plugins": [],
+      "presets": [
+        ["env", { "modules": "commonjs" }],
+        [
+          "next/babel",
+          {
+            "styled-jsx": {
+              "plugins": [["styled-jsx-plugin-postcss"]]
+            }
+          }
+        ]
+      ]
+    },
+    "production": {
+      "presets": [],
+      "plugins": []
+    }
+  }
+}

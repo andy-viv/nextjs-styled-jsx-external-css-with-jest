@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="jsx-__scopedHash"
+>
+  <p
+    className="jsx-__scopedHash"
+  >
+    footer: using it's own style
+  </p>
+  <h2
+    className="jsx-__scopedHash bananas"
+  >
+    footer: parent class selector
+  </h2>
+  <h3
+    className="jsx-__scopedHash apples"
+  >
+    footer: fails to use navbar selector until it's made global
+  </h3>
+</div>
+`;
