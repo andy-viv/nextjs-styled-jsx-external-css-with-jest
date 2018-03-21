@@ -2,31 +2,11 @@
   "env": {
     "test": {
       "plugins": [],
-      "presets": [
-        ["env", { "modules": "commonjs" }],
-        [
-          "next/babel",
-          {
-            "styled-jsx": {
-              "plugins": [["styled-jsx-plugin-postcss"]]
-            }
-          }
-        ]
-      ]
+      "presets": [["env"], ["next/babel"]]
     },
     "development": {
       "plugins": [],
-      "presets": [
-        ["env", { "modules": "commonjs" }],
-        [
-          "next/babel",
-          {
-            "styled-jsx": {
-              "plugins": [["styled-jsx-plugin-postcss"]]
-            }
-          }
-        ]
-      ]
+      "presets": [["env"], ["next/babel"]]
     },
     "production": {
       "presets": [],

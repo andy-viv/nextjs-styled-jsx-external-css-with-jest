@@ -1,26 +1,3 @@
-const path = require('path');
+const withSass = require("@zeit/next-sass");
 
-module.exports = {
-  webpack: (config, { dev }) => {
-    config.module.rules.push({
-      test: /\.(css|scss)/,
-      use: [
-        {
-          loader: 'emit-file-loader',
-          options: {
-            name: 'dist/[path][name].[ext].js',
-          },
-        },
-        {
-          loader: 'babel-loader',
-          options: {
-            babelrc: false,
-            extends: path.resolve(__dirname, './.babelrc'),
-          },
-        },
-        'styled-jsx-css-loader',
-      ],
-    });
-    return config;
-  },
-};
+module.exports = withSass();

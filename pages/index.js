@@ -1,10 +1,10 @@
-import React from 'react';
-import stylesheet from '../styles/index.scss';
+import React from "react";
+import stylesheet from "../styles/index.scss";
 // import normalize from 'normalize.css';
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-// console.log("styles:", stylesheet);
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+console.log("styles:", stylesheet);
 
 export default () => {
   return (
