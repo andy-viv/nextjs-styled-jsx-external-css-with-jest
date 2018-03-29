@@ -1,16 +1,43 @@
 {
   "env": {
     "test": {
-      "plugins": [],
+      "plugins": [
+        [
+          "styled-jsx/babel",
+          {
+            "plugins": [
+              "styled-jsx-plugin-sass"
+            ]
+          }
+        ]
+      ],
       "presets": [["env"], ["next/babel"]]
     },
     "development": {
-      "plugins": [],
+      "plugins": [
+        [
+          "styled-jsx/babel",
+          {
+            "plugins": [
+              "styled-jsx-plugin-sass"
+            ]
+          }
+        ]
+      ],
       "presets": [["env"], ["next/babel"]]
     },
     "production": {
       "presets": [],
-      "plugins": []
+      "plugins": [
+        [
+          "styled-jsx/babel",
+          {
+            "plugins": [
+              "styled-jsx-plugin-sass"
+            ]
+          }
+        ]
+      ]
     }
   }
 }
